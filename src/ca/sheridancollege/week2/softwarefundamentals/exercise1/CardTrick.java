@@ -32,25 +32,62 @@ public class CardTrick {
             magicHand[i].setValue((int) (Math.random() * 13 ) + 1);
         }
         
-        //insert code to ask the user for Card value and suit, create their card
-        
-        Card userCard = new Card();                   //user-card object created
-            Scanner sc = new Scanner(System.in);
-        
-        System.out.printf("%-30s", "Enter your suit : ");
-            String userSuit = sc.nextLine();        //user-input for user's Suit
-          
-          System.out.printf("%-30s", "Enter your value of suit : ");
-            int userValue = sc.nextInt();          //user-input for user's Value
-        
-          userCard.setSuit(userSuit);                  
-          userCard.setValue(userValue);
-
-          System.out.println("");
-          System.out.println("Your Card is : " + userCard);
+        /*--------------THE USER-CARD ASKING CODE IS COMMENTED OUT-----------
+                                --  STEP 7 --                                **/
+//      //insert code to ask the user for Card value and suit, create their card
+//        
+//      Card userCard = new Card();                   //user-card object created
+//            Scanner sc = new Scanner(System.in);
+//        
+//        System.out.printf("%-30s", "Enter your suit : ");
+//          String userSuit = sc.nextLine();        //user-input for user's Suit
+//          
+//          System.out.printf("%-30s", "Enter your value of suit : ");
+//          int userValue = sc.nextInt();          //user-input for user's Value
+//       
+//          userCard.setSuit(userSuit);                  
+//          userCard.setValue(userValue);
+//
+//          System.out.println("");
+//          System.out.println("Your Card is : " + userCard);
      
+        // A new hard-coded object luckyCard is created (Step 7) 
+        Card luckyCard = new Card();
+            luckyCard.setSuit(Card.SUITS[3]);
+            luckyCard.setValue(10);      
+          
         // and search magicHand here
+        
+        /** THE ATTRIBUTES OF LUCKY-CARD OBJECT ARE COMPARED WITH THE ATTRIBUTES
+            OF THE OBJECTS OF MAGIC-HAND ARRAY AND THE RESULT IS A BOOLEAN 
+                                        STEP 7                                */
+         boolean isTrue = false;
+        for (int i = 0; i < magicHand.length; i++) {
+            if (luckyCard.getSuit().equals(magicHand[i].getSuit()) && 
+                    luckyCard.getValue() == magicHand[i].getValue()) {
+                isTrue = true;
+            } 
+        }    
+        
         //Then report the result here
-    }
-    
+        
+        /** THE WINNER MESSAGE IS DISPLAYED IF THE USER WINS
+            THE LOSER MESSAGE IS DISPLAYED IF THE USER LOSES  
+                                        STEP 7                                */       
+        if (isTrue) {
+           System.out.println("Congrats! You Won! The card was : " + luckyCard);
+            System.out.println("");
+            System.out.println("The Magic Hand is : ");
+        for (int i = 0; i < magicHand.length; i++) {
+                System.out.println(magicHand[i]);
+        }
+        }else {
+            System.out.println("Sorry! You Lost! The card was : " + luckyCard);
+            System.out.println("");
+            System.out.println("The Magic Hand is : ");
+        for (int i = 0; i < magicHand.length; i++) {
+                System.out.println(magicHand[i]);
+            }
+        } 
+    }   
 }

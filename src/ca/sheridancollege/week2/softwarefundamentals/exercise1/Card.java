@@ -51,7 +51,8 @@ public class Card {
     }
    
     @Override
-    public String toString() {                     //toString Method created to print the card the user has selected....
+    public String toString() {                     //toString Method created to 
+                                      //print the card the user has selected....
         return String.format(suit + " " + value);
     }
     
