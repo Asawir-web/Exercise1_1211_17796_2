@@ -50,6 +50,9 @@ public class Card {
         this.value = value;
     }
    
-   
+    @Override
+    public String toString() {                     //toString Method created to print the card the user has selected....
+        return String.format(suit + " " + value);
+    }
     
 }
