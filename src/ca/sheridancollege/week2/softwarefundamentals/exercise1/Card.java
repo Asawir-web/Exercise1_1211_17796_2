@@ -1,8 +1,10 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+// @Author            :   ASAWIR AHMED
+// @Student Number    :   991618277
+// @Purpose           :   Exercise 01 {SOFTWARE FUNDAMENTALS}
+// @Date Assigned     :   25/01/2021
+// @Date Due          :   01/02/2021
+// @Date Attempted    :   26/01/2021
+
 package ca.sheridancollege.week2.softwarefundamentals.exercise1;
 
 /**
