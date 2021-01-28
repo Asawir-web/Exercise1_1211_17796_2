@@ -5,7 +5,6 @@
  */
 package ca.sheridancollege.week2.softwarefundamentals.exercise1;
 
-import java.util.Scanner;
 
 /**
  * A class that fills a magic hand of 7 cards with random Card Objects
@@ -37,8 +36,7 @@ public class CardTrick {
         // Tells user to pick a card any card
         System.out.println("pick a card any card");
         
-       
-             }
+                    
         
         
         }
