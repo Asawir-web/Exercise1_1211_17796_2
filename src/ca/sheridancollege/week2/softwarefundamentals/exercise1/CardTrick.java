@@ -65,7 +65,7 @@ public class CardTrick {
          if(userS.equals(mhS)&& userV == mhV){
          
          
-         // winning message
+         // winning message!!
        
          System.out.println("yayy this is your card: "+userV + userS);
          
@@ -75,7 +75,7 @@ public class CardTrick {
          
          }
             
-            // losing message
+            // losing message!!!
          else System.out.println("nope its not:"+magicHand[j].getValue()+magicHand[j].getSuit());
             
              }
