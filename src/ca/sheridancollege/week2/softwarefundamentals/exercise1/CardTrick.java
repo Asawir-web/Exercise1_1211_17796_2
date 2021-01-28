@@ -29,14 +29,56 @@ public class CardTrick {
             magicHand[i].setSuit(Card.SUITS[(int) (Math.random()*3)]);
         }
         
-        //insert code to ask the user for Card value and suit, create their card
-        // and search magicHand here
-        //Then report the result here
-       
-        // Tells user to pick a card any card
-        System.out.println("pick a card any card");
+
+	   // hard coded Lucky card object 
+        // used modifiers to choose the suit(hearts)
+        // modified the value to choose 5 
+        Card luckyCard =new Card(); 
         
-                    
+        luckyCard.setSuit("Hearts");
+        luckyCard.setValue(5);
+        
+        // since I cannot compare objects with = operator
+        //  accessors used  to unbox(return) 
+        //them into their primitive type(int,String)
+        
+        String userS =luckyCard.getSuit();
+        int userV= luckyCard.getValue();
+        
+       
+      //  for loop to itterate through magicHand[] obj array
+      // passed obj array into primitive types using accessors
+     
+        for(int j = 0; j <magicHand.length; j++){
+           
+            String mhS= magicHand[j].getSuit();
+            
+            
+            int mhV=magicHand[j].getValue();
+            
+            
+            
+        // if statement used to compare magichand [] and LuckyCard
+        // equals() method can compare string
+        // == operater can compare int value
+            
+         if(userS.equals(mhS)&& userV == mhV){
+         
+         
+         // winning message
+       
+         System.out.println("yayy this is your card: "+userV + userS);
+         
+         
+         
+         
+         
+         }
+            
+            // losing message
+         else System.out.println("nope its not:"+magicHand[j].getValue()+magicHand[j].getSuit());
+            
+             }
         
         
         }
